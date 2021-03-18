@@ -7,8 +7,8 @@ const targetNum = Math.floor(Math.random * maximum) + 1;
 let guess = parseInt(prompt('Enter your first guess'));
 let attempts = 1;
 
-while (parseInt(guess !== targetNum)); {
-    if (guess === 'q') 
+while (parseInt(guess) !== targetNum); {
+    if (guess === 'q') break;
     attempts++;
     if (guess > targetNum) {
         guess = prompt('Too high, come down')
@@ -21,6 +21,6 @@ while (parseInt(guess !== targetNum)); {
 if (guess === 'q') {
     document.write("You BIG BABY!!")
 } else {
-    document.write("CONGRATS YOU WIN!")
-    document.write(`Well Done, it took ${attempts} guesses`)
+    document.write("CONGRATS YOU WIN! ")
+    document.write(`Well Done, it took ${attempts} guesses `)
 }
